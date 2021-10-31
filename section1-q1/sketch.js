@@ -16,28 +16,28 @@ function setup(){
 
 
 
-noStroke();
-fill(14, 47, 146);
-circle(250, 100, 105);//青円
-fill(255);
-circle(242,97,98);//白円塗りつぶし
-fill(22, 131, 46);
-circle(243,96,89);//緑円
-fill(255);
-circle(240,100,82);//白円塗りつぶし
-//fill(196,0,0);
-//beginShape();
-//vertex(185,100);
-//bezierVertex(190,50,195,100,210,80);
-//bezierVertex(190,35,195,85,210,65);
-//endShape();　赤部分無理だった
-noFill();
-strokeWeight(2);
-stroke(77);
-textSize(22);
-textFont("serif");
-text("KOBE", 210, 94);//KOBE
-strokeWeight(1);
-textSize(9);
-text("UNIVERSITY",222,110);//UNIVERSITY
+  noStroke();
+  fill(14, 47, 146);
+  circle(250, 100, 105);//青円
+  fill(255);
+  circle(242,97,98);//白円塗りつぶし
+  fill(22, 131, 46);
+  circle(243,96,89);//緑円
+  fill(255);
+  circle(240,100,82);//白円塗りつぶし
+  //fill(196,0,0);
+  //beginShape();
+  //vertex(185,100);
+  //bezierVertex(190,50,195,100,210,80);
+  //bezierVertex(190,35,195,85,210,65);
+  //endShape();　赤部分無理だった
+  noFill();
+  strokeWeight(2);
+  stroke(77);
+  textSize(22);
+  textFont("serif");
+  text("KOBE", 210, 94);//KOBE
+  strokeWeight(1);
+  textSize(9);
+  text("UNIVERSITY",222,110);//UNIVERSITY
 }
