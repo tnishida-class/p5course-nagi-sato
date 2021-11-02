@@ -13,16 +13,20 @@ function setup() {
   const cx = width / 2; // 中心は (cx, cy)
   const cy = height / 2;
   const maxR = min(width, height); // 大きさは幅と高さのうち小さい方
-
-  drawCircle(black, maxR);
-  drawArcs(green, red, maxR * 0.8);
-  // BLANK[1] (hint: drawArcs x 3, drawCircle x 1)
-  drawCircle(red, maxR * 0.05);
+  for(let x = 0; x < 8; x++){
+  for(let y = 0; y < 8; y++){
+    drawCircle(black, maxR);//no.1黒円
+    drawArcs(green, red, maxR * 0.8);//no.2赤緑しましま
+    drawArcs(cream, black, maxR * 0.8 * 0.94 );//no.3クリーム黒しましま
+    drawArcs(green, red, maxR * 0.5);//no.4赤緑しましま
+    drawArcs(cream, black, maxR * 0.5 * 0.9);//no.5クリーム黒しましま
+    drawCircle(green, maxR * 0.1);
+    drawCircle(red,maxR * 0.05);
 }
 
 function drawCircle(c, r){
   fill(c);
-  ellipse(cx, cy, r, r);
+  ellipse(cx, cy, r, r);//drawCircleの定義
 }
 
 function drawArcs(c1, c2, r) {
@@ -30,6 +34,8 @@ function drawArcs(c1, c2, r) {
     let start = TWO_PI / 20 * i;
     let stop = TWO_PI / 20 * (i + 1);
     fill(i % 2 == 0 ? c1 : c2);
-    arc(cx, cy, r, r, start, stop, PIE);
-  }
+    arc(cx, cy, r, r, start, stop, PIE);//drawArcsの定義
+}
+}
+}
 }
