@@ -11,20 +11,21 @@ function setup(){
 
 function draw(){
   background(160, 192, 255);
-  for(let i = 0; i < balls.length; i++){
-    let b = balls[i];
-    ellipse(b.x, b.y, b.size);
-    b.x += b.vx;
-    b.y += b.vy;
+  for(let i = 0; i < balls.length; i++){//iは0以上データ数以下
+    let b = balls[i];//bにindex値(i)を代入
+    ellipse(b.x, b.y, b.size);//中心(i,i)直径iの円を描く
+    b.x += b.vx;//中心のx座標　xの速度分ずつ増える
+    b.y += b.vy;//中心のy座標　ｙの速度分ずつ増える
   }
 }
 
-function mouseDragged(){
-  const dx = mouseX - pmouseX;
-  const dy = mouseY - pmouseY;
-  if(mag(dx, dy) > 5){
-    const b = { x: mouseX, y: mouseY, size: 20, vx: dx, vy: dy };
-    balls.push(b);
+function mouseDragged(){//イベントハンドラ　ドラッグした時
+  const dx = mouseX - pmouseX;//dx＝xの増加量
+  const dy = mouseY - pmouseY;//dy＝yの増加量
+  if(mag(dx, dy) > 5){//ベクトル(x,y)の大きさが6以上の場合
+    const b = { x: mouseX, y: mouseY, size: random(10, 80), vx: dx, vy: dy };
+    //中心はドラッグの始点，サイズはランダム，速度を増加領分に
+    balls.push(b);//末尾に値を追加
   }
 }
 
