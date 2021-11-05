@@ -15,10 +15,15 @@ function setup(){
   for(let i = 0; i < n; i++){ line(0, height * i / n, width, height * i / n); }
 
   // ここからが本番
-  fill(0);
-  const dx = width / scores.length;
+  stroke(0);//黒
+   const dx = width / scores.length;
   let px, py; // 線を引くために一つ前の点を覚えておく変数
   for(let i = 0; i < scores.length; i++){
+    const dy = height - height * scores[i] / 100;//dx=幅/データ数
+   strokeWeight(10);//点太さ
+   point(i * dx, dy);//点
+   strokeWeight(2);//線太さ
+   line(i * dx, dy, (i - 1) * dx, height - height * scores[i - 1] / 100);//始点今の点，終点前の点
     // BLANK[1]
   }
 }
