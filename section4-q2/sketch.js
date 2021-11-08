@@ -13,6 +13,13 @@ function setup(){
   // 円グラフを描くには割合が必要なので合計を計算しておく
   let total = 0;
   for(let i = 0; i < scores.length; i++){ total += scores[i]; }
-
-  // BLANK[1]
+  //iが0以上データ数未満のとき，totalはscoresの合計を繰り返す
+  stroke(0);
+  strokeWeight(3);
+  fill(255, 255, 255);
+  for(let i = 0; i < scores.length; i++){
+    const radian = scores[i] / total * PI;
+    arc(200, 200, 200, 200, scores[i - 1] / total * PI, radian, CHORD);
+  }
+  // BLANK[1]なんかただの円になるんですけど
 }
